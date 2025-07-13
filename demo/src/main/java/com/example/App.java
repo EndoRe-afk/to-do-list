@@ -19,9 +19,9 @@ public class App extends Application implements EventHandler<ActionEvent> {
     private Button button;
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws IOException {
 
-        stage.setTitle("My to do list :))");
+        primaryStage.setTitle("My to do list :))");
 
         button = new Button();  // Creates a simple button
         button.setText("Create new list"); // Gives a button a text
@@ -33,8 +33,8 @@ public class App extends Application implements EventHandler<ActionEvent> {
         // Scene represents the content inside your window
         scene = new Scene(layout, 200, 100);  // first parameter of your scene is the object in question e.g layout
                                               // second parameter is width, third is height
-        stage.setScene(scene);  //sets the content (the layout and UI elements) that will be displayed in the application window.
-        stage.show(); // makes window visible to user
+        primaryStage.setScene(scene);  //sets the content (the layout and UI elements) that will be displayed in the application window.
+        primaryStage.show(); // makes window visible to user
     }
 
 
