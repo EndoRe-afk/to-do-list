@@ -1,7 +1,6 @@
 package com.example;
 
 import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -35,6 +34,17 @@ public class App extends Application implements EventHandler<ActionEvent> {
                                               // second parameter is width, third is height
         primaryStage.setScene(scene);  //sets the content (the layout and UI elements) that will be displayed in the application window.
         primaryStage.show(); // makes window visible to user
+
+
+        button.setOnAction(e -> {
+            StackPane listLayout = new StackPane();
+            // You can add UI elements to listLayout here if needed
+            Scene listScene = new Scene(listLayout, 500, 500);
+            primaryStage.setScene(listScene);
+            primaryStage.show();
+            
+        });
+
     }
 
 
